@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.css']
 })
+
 export class RegisterPageComponent implements OnInit {
   name: string;
   price: number; // preço
   categories: string[]; // array de string
-  selectedCategorie: string | null; // opção selecionada
+  selectedCategory: string | null; // opção selecionada
 
   constructor() {
     this.categories = [
@@ -19,9 +20,7 @@ export class RegisterPageComponent implements OnInit {
     ]
     this.name = "";
     this.price = 0;
-    this.selectedCategorie = null;
-
-
+    this.selectedCategory = null;
    }
 
   ngOnInit(): void {
