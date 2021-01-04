@@ -1,30 +1,67 @@
 .page-container{
-    display: grid;
-    height: 100vh;
-
+  display: grid;
+  height: 100vh;
 }
 
 form{
-    place-self: center;
-    width: min-content; /* fica dentro da dive */ 
-    height: 60vh;
-    border: solid 1px #ced4da;
-    border-radius: 3px;
-    
-    
-    
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 100px;
+  place-self: center;
+  width: 90%;
+  height: 300px;
+  border: solid 1px #ced4da;
+  border-radius: 3px;
 }
 
-.row{
+.fields-container {
+  grid-column: 1/5;
+  grid-row: 1;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  place-self: center;
+  align-items: center;
+}
+
+button {
+  grid-column: 2/4;
+  grid-row: 2;
+  height: min-content;
+  place-self: center;
+}
+
+@media screen and (min-width: 700px) {
+  form{
     display: grid;
     place-self: center;
-    justify-content: space-around;
-    margin: 15px;
-    grid-template-columns: repeat(5, 1fr);
-}
+    width: 90%;
+    height: 200px;
+    max-width: 640px;
+    border: solid 1px #ced4da;
+    border-radius: 3px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 
-.field{
-    margin: 0px ;
-    margin-right: 10px;
-    
+  .fields-container {
+    width: 95%;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-column: 1/5;
+    grid-row: 1;
+    place-self: center;
+  }
+
+  button {
+    grid-column: 4;
+    grid-row: 2;
+    height: min-content;
+    place-self: center;
+  }
+
 }
