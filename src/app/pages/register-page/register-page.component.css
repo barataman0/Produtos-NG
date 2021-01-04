@@ -1,0 +1,30 @@
+.page-container{
+    display: grid;
+    height: 100vh;
+
+}
+
+form{
+    place-self: center;
+    width: min-content; /* fica dentro da dive */ 
+    height: 60vh;
+    border: solid 1px #ced4da;
+    border-radius: 3px;
+    
+    
+    
+}
+
+.row{
+    display: grid;
+    place-self: center;
+    justify-content: space-around;
+    margin: 15px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.field{
+    margin: 0px ;
+    margin-right: 10px;
+    
+}
