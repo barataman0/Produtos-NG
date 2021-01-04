@@ -1,17 +1,17 @@
 <div class="page-container">
-   <form> <!-- formulario -->
-    <div class="row">
-        <span class="p-float-label">
-            <input id="float-input" class="field" type="text" pInputText [(ngModel)]="name"> 
-            <label for="float-input">name</label>
-        </span>
-        <p-inputNumber class="field" [(ngModel)]="price"></p-inputNumber>
-        <p-dropdown  [options]="categories" [(ngModel)]="selectedCategorie">
-            <ng-template let-categorie pTemplate="item">
-                <div>{{categorie}}</div>
-            </ng-template>
-        </p-dropdown>
-    </div> 
+  <form> <!-- formulario -->
+    <div class="fields-container">
+      <span class="p-float-label">
+          <input name="name" id="float-input" type="text" pInputText [(ngModel)]="name">
+          <label for="float-input">name</label>
+      </span>
+      <p-inputNumber name="price" [(ngModel)]="price"></p-inputNumber>
+      <p-dropdown name="categories" [options]="categories" [(ngModel)]="selectedCategory">
+          <ng-template let-category pTemplate="item">
+              <div>{{category}}</div>
+          </ng-template>
+      </p-dropdown>
+    </div>
     <button pButton type="button" label="Register"></button>
-   </form>
+  </form>
 </div>
